@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/black"
+    tools:context="com.pocketcloset.stef.pocketcloset.ItemActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_outline"
+        android:id="@+id/frameLayout2" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/item_picture"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/color"
+        android:textColor="@color/white"
+        android:id="@+id/colour_update"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/type_update"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/type"
+        android:textColor="@color/white"
+        android:id="@+id/type_update"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/colour_update"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/weather"
+        android:textColor="@color/white"
+        android:id="@+id/weather_update"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/type_update"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/lastworn"
+        android:textColor="@color/white"
+        android:id="@+id/last_worn_update"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/weather_update"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/trend"
+        android:id="@+id/trend_update"
+        android:textColor="@color/white"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/last_worn_update"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="@string/done"
+        android:id="@+id/update_btn"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/trend_update" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/delete"
+        android:id="@+id/delete_btn"
+        android:background="@color/white"
+        android:layout_alignTop="@+id/update_btn"
+        android:layout_alignEnd="@+id/frameLayout2"
+        android:layout_marginEnd="40dp" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="15dp"
+        android:id="@+id/colour_edit"
+        android:layout_above="@+id/type_update"
+        android:layout_toEndOf="@+id/update_btn"
+        android:background="@color/white" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="15dp"
+        android:id="@+id/type_edit"
+        android:layout_alignBottom="@+id/type_update"
+        android:layout_alignStart="@+id/colour_edit"
+        android:background="@color/white" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="15dp"
+        android:id="@+id/weather_edit"
+        android:layout_above="@+id/last_worn_update"
+        android:layout_alignStart="@+id/type_edit"
+        android:background="@color/white" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="15dp"
+        android:id="@+id/last_worn_edit"
+        android:layout_alignBottom="@+id/last_worn_update"
+        android:layout_alignStart="@+id/weather_edit"
+        android:background="@color/white" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="15dp"
+        android:id="@+id/trend_edit"
+        android:layout_alignBottom="@+id/trend_update"
+        android:layout_alignStart="@+id/last_worn_edit"
+        android:background="@color/white" />
+
+</RelativeLayout>
